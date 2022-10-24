@@ -12,8 +12,8 @@ runs:
         pip install black isort
       shell: bash
     - run: |
-        python black --config pyproject.toml --check . 
-        python isort --settings-file pyproject.toml --check .
+        black --config pyproject.toml --check . 
+        isort --settings-file pyproject.toml --check .
       shell: bash
 
 # look for something like requires
