@@ -19,3 +19,20 @@ It is advised to use this action before any other aciton that runs tests or buil
 This will ensure code is formatted before running tests or building the code. 
 Incase the code is not formatted, it will fail-fast and not run any other action.
 
+### Inputs
+
+#### "config":
+The variable `config` stores the path to the configuration file. Default is `pyproject.toml` present at root.
+
+If you want to use a different configuration file, you can specify the path to the configuration file using the `config` input.
+Example: If the configuration file is present in the 'app' folder named 'testconfig.toml' then you can specify this as:
+
+```yaml
+...
+ steps:
+      - name: Format Code check
+        uses: pharm-it-de/python-format-action@v1.7
+        with:
+          config: ./app/testconfig.toml # filename with path
+...
+```
