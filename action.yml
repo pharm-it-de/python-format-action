@@ -4,6 +4,13 @@ description: "An action to run python code format tools."
 branding:
   icon: "truck"
   color: "gray-dark"
+
+inputs:
+  config:
+    description: "Path to the config file"
+    required: true
+    default: "pyproject.toml"
+
 runs:
   using: "composite"
   steps:
@@ -18,8 +25,7 @@ runs:
         pip install black isort
       shell: bash
     - run: |
-        black --config pyproject.toml --check . 
-        isort --settings-file pyproject.toml --check .
+        black --config ${{ inputs.config }} --check . 
+        isort --settings-file ${{ inputs.config }}  --check .
       shell: bash
 
-# make config location dynamic:? root
