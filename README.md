@@ -12,7 +12,7 @@ This action checkout code , setup python and install the dependencies and run th
 ...
    steps:
       - name: Format Code check
-        uses: pharm-it-de/python-format-action@v1.6
+        uses: pharm-it-de/python-format-action@v1.7
 ...
 ```
 It is advised to use this action before any other aciton that runs tests or builds the code.
