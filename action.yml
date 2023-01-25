@@ -28,4 +28,3 @@ runs:
         black --config ${{ inputs.config }} --check . 
         isort --settings-file ${{ inputs.config }}  --check .
       shell: bash
-
