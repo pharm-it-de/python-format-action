@@ -12,7 +12,7 @@ This action checkout code , setup python and install the dependencies and run th
 ...
    steps:
       - name: Format Code check
-        uses: pharm-it-de/python-format-action@v1.7
+        uses: pharm-it-de/python-format-action@latest
 ...
 ```
 It is advised to use this action before any other aciton that runs tests or builds the code.
@@ -31,7 +31,7 @@ Example: If the configuration file is present in the 'app' folder named 'testcon
 ...
  steps:
       - name: Format Code check
-        uses: pharm-it-de/python-format-action@v1.7
+        uses: pharm-it-de/python-format-action@latest
         with:
           config: ./app/testconfig.toml # filename with path
 ...
