@@ -12,7 +12,7 @@ This action checkout code , setup python and install the dependencies and run th
 ...
    steps:
       - name: Format Code check
-        uses: pharm-it-de/python-format-action@latest
+        uses: pharm-it-de/python-format-action@main
 ...
 ```
 It is advised to use this action before any other aciton that runs tests or builds the code.
@@ -31,8 +31,17 @@ Example: If the configuration file is present in the 'app' folder named 'testcon
 ...
  steps:
       - name: Format Code check
-        uses: pharm-it-de/python-format-action@latest
+        uses: pharm-it-de/python-format-action@main
         with:
           config: ./app/testconfig.toml # filename with path
 ...
 ```
+
+### Release Management
+The creators of a community action have the option to use tags, branches, or SHA values to manage releases of the action. 
+We are going to use 'main' branch in all of our repositories to use the latest version of *python-format-action*
+
+[https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#using-release-management-for-your-custom-actions]
+
+
+
