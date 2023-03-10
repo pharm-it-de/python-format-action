@@ -10,8 +10,6 @@ inputs:
     description: "Path to the config file"
     required: true
     default: "pyproject.toml"
-
-inputs:
   python-version:
     description: 'Python version to run black & isort'
     required: false
