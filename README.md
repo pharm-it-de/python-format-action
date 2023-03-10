@@ -37,6 +37,21 @@ Example: If the configuration file is present in the 'app' folder named 'testcon
 ...
 ```
 
+#### "python-version":
+With the variable `python-version` you are able to overwrite the python version to run `black` &  `isort`.
+
+For example, running the action with python version `3.10`:
+
+```yaml
+...
+ steps:
+      - name: Format Code check
+        uses: pharm-it-de/python-format-action@main
+        with:
+          python-version: "3.10"
+...
+```
+
 ### Release Management
 The creators of a community action have the option to use tags, branches, or SHA values to manage releases of the action. 
 We are going to use 'main' branch in all of our repositories to use the latest version of *python-format-action*
